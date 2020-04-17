@@ -5,7 +5,7 @@ import org.springframework.boot.CommandLineRunner
 import org.springframework.stereotype.Service
 
 @Service
-class Init() : CommandLineRunner {
+class Init(): CommandLineRunner {
 
     private val onStartLogger = LoggerFactory.getLogger(Init::class.java)
 
