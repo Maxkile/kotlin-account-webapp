@@ -3,7 +3,7 @@ package com.msu.webapp.webapp.models
 import org.jetbrains.annotations.NotNull
 import javax.persistence.*
 
-@Entity
+//@Entity
 @Table(name = "universities")
 data class University(
         var name: String,

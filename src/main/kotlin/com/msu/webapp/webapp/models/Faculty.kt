@@ -2,7 +2,7 @@ package com.msu.webapp.webapp.models;
 
 import javax.persistence.*
 
-@Entity
+//@Entity
 @Table(name = "universities")
 data class Faculty(
         var name: String,

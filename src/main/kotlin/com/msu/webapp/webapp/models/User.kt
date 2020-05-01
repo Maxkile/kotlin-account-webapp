@@ -10,7 +10,7 @@ import java.nio.file.attribute.UserPrincipal
 import java.util.*
 import javax.persistence.*
 
-@Entity
+//@Entity
 @Table(name = "users")
 data class User(
         var userName: String,
