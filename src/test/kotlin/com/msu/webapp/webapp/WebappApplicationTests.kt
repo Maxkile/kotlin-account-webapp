@@ -1,13 +1,25 @@
 package com.msu.webapp.webapp
 
+import org.junit.jupiter.api.AfterAll
+import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.boot.test.web.client.TestRestTemplate
 
-@SpringBootTest
-class WebappApplicationTests {
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+class WebappApplicationTests(
+		@Autowired val restTemplate: TestRestTemplate
+) {
 
-	@Test
-	fun contextLoads() {
+	@BeforeAll
+	fun setup() {
+		println(">> Setup")
+	}
+
+	@AfterAll
+	fun teardown() {
+		println(">> Tear down")
 	}
 
 }

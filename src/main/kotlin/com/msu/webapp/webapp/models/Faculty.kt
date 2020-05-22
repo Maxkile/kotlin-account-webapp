@@ -1,20 +1,25 @@
 package com.msu.webapp.webapp.models;
 
+import org.hibernate.annotations.OnDelete
+import org.hibernate.annotations.OnDeleteAction
 import javax.persistence.*
 
-//@Entity
-@Table(name = "universities")
+@Entity
+@Table(name = "faculties")
 data class Faculty(
-        var name: String,
-        var places: Int,
+        var name: String? = null,
+        var places: Int? = null,
 
-        @ManyToOne
-        var university: University,
+        @ManyToOne(fetch = FetchType.EAGER)
+        @JoinColumn(name = "university_id", nullable = false)
+        @OnDelete(action = OnDeleteAction.CASCADE)
+        val university: University,
 
-        @ManyToMany
-        var students: MutableList<Faculty> = mutableListOf()
+        @ManyToOne(fetch = FetchType.EAGER)
+        @JoinColumn(name = "offer_id", nullable = false)
+        @OnDelete(action = OnDeleteAction.CASCADE)
+        val offer: Offer
 ) {
-
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)

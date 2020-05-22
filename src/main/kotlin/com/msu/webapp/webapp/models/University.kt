@@ -1,20 +1,20 @@
 package com.msu.webapp.webapp.models
 
-import org.jetbrains.annotations.NotNull
 import javax.persistence.*
 
 //@Entity
 @Table(name = "universities")
 data class University(
-        var name: String,
+        var name: String? = null,
 
-        var adress: String,
+        var address: String? = null,
 
-        @OneToMany
-        var faculties: MutableList<Any> = mutableListOf(),
+        @OneToMany(fetch = FetchType.EAGER,mappedBy = "university",cascade = [CascadeType.ALL])
+        val offers: MutableList<Offer> = mutableListOf(),
 
-        @ManyToMany
-        var enrollees: MutableList<User> = mutableListOf()
+        @OneToMany(fetch = FetchType.EAGER,mappedBy = "university",cascade = [CascadeType.ALL])
+        val faculties: MutableList<Faculty> = mutableListOf()
+
 ) {
     @Id
     @Column(name = "id")
