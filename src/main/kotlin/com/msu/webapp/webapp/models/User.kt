@@ -33,7 +33,7 @@ data class User(
         var role: Roles = Roles.USER,
 
         @OneToMany(fetch = FetchType.EAGER,mappedBy = "user",cascade = [CascadeType.ALL])
-        val offers: MutableList<Offer> = mutableListOf()
+        val offers: MutableList<Offer> = mutableListOf()//заявки
 
 ) : UserDetails {
 

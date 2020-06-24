@@ -34,8 +34,16 @@ class MainController(
     @GetMapping("/registration")
     fun getRegistration(model: Model): String{
         model.addAttribute("user",User())
-        return "registration";
+        return "registration";//относительньно resources templates
     }
+//    @GetMapping(относительный url)
+//    fun getLK(User: usr):String//return name
+//    {
+//        if check login
+//            return (путь к html)
+//        else
+//            return "index"
+//    }
 
     @PostMapping("/registration")
     fun postRegistration(@ModelAttribute("user") user: User): String{
