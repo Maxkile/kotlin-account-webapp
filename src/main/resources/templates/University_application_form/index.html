@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="Colorlib Templates" name="description">
+    <meta content="Colorlib" name="author">
+    <meta content="Colorlib Templates" name="keywords">
+
+    <!-- Title Page-->
+    <title>Форма заявления</title>
+
+    <!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" media="all" rel="stylesheet">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" media="all" rel="stylesheet">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" media="all" rel="stylesheet">
+    <link href="vendor/datepicker/daterangepicker.css" media="all" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" media="all" rel="stylesheet">
+</head>
+
+<body>
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+    <div class="wrapper wrapper--w680">
+        <div class="card card-4">
+            <div class="card-body">
+                <h2 class="title">Заявление абитуриента</h2>
+                <form action="../main.html" method="POST">
+                    <!--                        <div class="row row-space">-->
+                    <!--                            <div class="col-2">-->
+                    <!--                                <div class="input-group">-->
+                    <!--                                    <label class="label">Логин</label>-->
+                    <!--                                    <input class="input&#45;&#45;style-4" name="first_name" type="text">-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="col-2">-->
+                    <!--                                <div class="input-group">-->
+                    <!--                                    <label class="label">Пароль</label>-->
+                    <!--                                    <input class="input&#45;&#45;style-4" name="last_name" type="text">-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="row row-space">-->
+                    <!--                            <div class="col-2">-->
+                    <!--                                <div class="input-group">-->
+                    <!--                                    <label class="label">Дата рождения</label>-->
+                    <!--                                    <div class="input-group-icon">-->
+                    <!--                                        <input class="input&#45;&#45;style-4 js-datepicker" name="birthday" type="text">-->
+                    <!--                                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>-->
+                    <!--                                    </div>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="col-2">-->
+                    <!--                                <div class="input-group">-->
+                    <!--                                    <label class="label">Пол</label>-->
+                    <!--                                    <div class="p-t-10">-->
+                    <!--                                        <label class="radio-container m-r-45">М.-->
+                    <!--                                            <input checked="checked" name="gender" type="radio">-->
+                    <!--                                            <span class="checkmark"></span>-->
+                    <!--                                        </label>-->
+                    <!--                                        <label class="radio-container">Ж.-->
+                    <!--                                            <input name="gender" type="radio">-->
+                    <!--                                            <span class="checkmark"></span>-->
+                    <!--                                        </label>-->
+                    <!--                                    </div>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="row row-space">-->
+                    <!--                            <div class="col-2">-->
+                    <!--                                <div class="input-group">-->
+                    <!--                                    <label class="label">Почта</label>-->
+                    <!--                                    <input class="input&#45;&#45;style-4" name="email" type="email">-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            <div class="col-2">-->
+                    <!--                                <div class="input-group">-->
+                    <!--                                    <label class="label">Номер телефона</label>-->
+                    <!--                                    <input class="input&#45;&#45;style-4" name="phone" type="text">-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <div class="input-group">
+                        <label class="label">Университет</label>
+                        <div class="rs-select2 js-select-simple select--no-search">
+                            <select name="subject">
+                                <option disabled="disabled" selected="selected">Выберите ВУЗ</option>
+                                <option>МГУ</option>
+                                <option>ВШЭ</option>
+                                <option>МФТИ</option>
+                            </select>
+                            <div class="select-dropdown"></div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label class="label">Направление</label>
+                        <div class="rs-select2 js-select-simple select--no-search">
+                            <select name="subject">
+                                <option disabled="disabled" selected="selected">Выберите факультет</option>
+                                <option>Физический</option>
+                                <option>Математический</option>
+                                <option>Естественно-научный</option>
+                            </select>
+                            <div class="select-dropdown"></div>
+                        </div>
+                    </div>
+                    <div class="p-t-15">
+                        <button class="btn btn--radius-2 btn--blue" type="submit">
+                            Отправить
+                        </button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Jquery JS-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<!-- Vendor JS-->
+<script src="vendor/select2/select2.min.js"></script>
+<script src="vendor/datepicker/moment.min.js"></script>
+<script src="vendor/datepicker/daterangepicker.js"></script>
+
+<!-- Main JS-->
+<script src="js/global.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->
